@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "Tubes_PBO_451090ec"
-        },
-        {
-            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -22,7 +15,7 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "TUBES_68994918",
+            "projectName": "Tubes_PBO_4b9668f6",
             "vmArgs": "--module-path lib/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
