@@ -15,8 +15,8 @@
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
-            "projectName": "Tubes_PBO_ae3a605f",
-            "vmArgs": "--module-path \"C:/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml"
+            "projectName": "TUBES_68994918",
+            "vmArgs": "--module-path lib/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
 }
