@@ -71,11 +71,22 @@ public class ContactApp extends Application {
             }
         });
 
+        Button backButton = new Button("Back to Menu");
+        backButton.setOnAction(e -> {
+            MenuApp menuApp = new MenuApp();
+            try {
+                menuApp.start(primaryStage);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        });
+
         // Layouts
-        VBox formLayout = new VBox(10, nameField, phoneField, addButton);
+        VBox formLayout = new VBox(10, nameField, phoneField, addButton, backButton);
         VBox actionLayout = new VBox(10, editButton, deleteButton, messageField, sendMessageButton);
         HBox mainLayout = new HBox(10, contactListView, formLayout, actionLayout);
         mainLayout.setPadding(new Insets(10));
+        
 
         Scene scene = new Scene(mainLayout, 600, 400);
         primaryStage.setTitle("Contact App");
