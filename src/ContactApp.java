@@ -71,6 +71,7 @@ public class ContactApp extends Application {
             }
         });
 
+        // Back button
         Button backButton = new Button("Back to Menu");
         backButton.setOnAction(e -> {
             MenuApp menuApp = new MenuApp();

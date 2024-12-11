@@ -84,7 +84,7 @@ editIdButton.setOnAction(e -> {
         // Back button to return to the menu
         Button backButton = new Button("Back to Menu");
         backButton.setOnAction(e -> {
-            MenuApp menuApp = new MenuApp(); // Assuming MenuApp exists
+            MenuApp menuApp = new MenuApp();
             try {
                 menuApp.start(primaryStage);
             } catch (Exception ex) {
