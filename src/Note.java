@@ -16,7 +16,7 @@ public class Note extends Application {
         TextArea noteField = new TextArea();
         noteField.setPromptText("Write your note here...");
 
-        // Add Note Button
+        // Add Note Buttons
         Button addNoteButton = new Button("Add Note");
         addNoteButton.setOnAction(e -> {
             String note = noteField.getText();

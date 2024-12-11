@@ -19,7 +19,7 @@ public class Login extends Application {
             String password = passField.getText();
 
             if (username.equals("admin") && password.equals("1234")) {
-                // Redirect to ContactApp
+               
                 ContactApp contactApp = new ContactApp();
                 try {
                     contactApp.start(primaryStage);

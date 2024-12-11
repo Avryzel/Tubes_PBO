@@ -33,7 +33,7 @@ public class ContactApp extends Application {
             }
         });
 
-        // Edit and delete buttons
+        // Edit and delete button
         Button editButton = new Button("Edit Contact");
         Button deleteButton = new Button("Delete Contact");
 
