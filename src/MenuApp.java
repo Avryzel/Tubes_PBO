@@ -34,7 +34,7 @@ public class MenuApp extends Application {
                             "-fx-background-radius: 10;");
         menuLayout.setAlignment(Pos.CENTER);
 
-        menuScene = new Scene(menuLayout, 350, 500);
+        menuScene = new Scene(menuLayout, 600, 400);
 
         // Atur dan tampilkan stage
         primaryStage.setTitle("Menu");

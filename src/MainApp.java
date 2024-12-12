@@ -41,7 +41,7 @@ public class MainApp extends Application {
                               "-fx-background-radius: 10;");
         loginLayout.setAlignment(Pos.CENTER);
 
-        loginScene = new Scene(loginLayout, 350, 400); // Ukuran disesuaikan
+        loginScene = new Scene(loginLayout, 600, 400); // Ukuran disesuaikan
     }
 
     private Label createLabel(String text) {
@@ -101,7 +101,7 @@ public class MainApp extends Application {
                              "-fx-background-radius: 10;");
         menuLayout.setAlignment(Pos.CENTER);
 
-        menuScene = new Scene(menuLayout, 350, 500);
+        menuScene = new Scene(menuLayout, 600, 400);
     }
 
     // Metode helper untuk membuat tombol dengan styling

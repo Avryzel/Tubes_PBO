@@ -59,7 +59,7 @@ public class Note extends Application {
 
         VBox layout = new VBox(10, notesListView, noteField, addNoteButton, editNoteButton, deleteNoteButton, backButton);
         layout.setPadding(new Insets(10));
-        Scene scene = new Scene(layout, 400, 400);
+        Scene scene = new Scene(layout, 600, 400);
 
         primaryStage.setTitle("Notes");
         primaryStage.setScene(scene);

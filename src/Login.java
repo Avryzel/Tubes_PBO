@@ -45,7 +45,7 @@ public class Login extends Application {
         VBox layout = new VBox(10, logoView, userLabel, userField, passLabel, passField, loginButton);
         layout.setPadding(new Insets(20));
         layout.setStyle("-fx-background-color: #f0f0f0;"); // Mengatur warna latar belakang
-        Scene scene = new Scene(layout, 300, 300);
+        Scene scene = new Scene(layout, 600, 400);
 
         primaryStage.setTitle("Login");
         primaryStage.setScene(scene);

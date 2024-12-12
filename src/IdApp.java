@@ -94,7 +94,7 @@ editIdButton.setOnAction(e -> {
 
         VBox layout = new VBox(10, idListView, idField, passwordField, addIdButton, editIdButton, deleteIdButton, backButton);
         layout.setPadding(new Insets(10));
-        Scene scene = new Scene(layout, 400, 500);
+        Scene scene = new Scene(layout, 600, 400);
 
         primaryStage.setTitle("ID Manager");
         primaryStage.setScene(scene);
