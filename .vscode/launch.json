@@ -6,6 +6,7 @@
     "configurations": [
         {
             "type": "java",
+ main
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
