@@ -1,8 +1,8 @@
 import javafx.application.Application;
 
-public class Main {
+public class Running {
     public static void main(String[] args) {
         // Langsung launch MainApp
-        Application.launch(MainApp.class, args);
+        Application.launch(MainApk.class, args);
     }
 }
