@@ -1,43 +1,43 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "java",
-            "name": "MainApp",
-            "request": "launch",
-            "mainClass": "MainApp",
-            "projectName": "Tubes_PBO_a45f3843"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "Tubes_PBO_a45f3843"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "Tubes_PBO_451090ec"
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "TUBES_68994918",
-            "vmArgs": "--module-path lib/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
-        }
-    ]
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Running",
+      "request": "launch",
+      "mainClass": "Running",
+      "projectName": "Tubes_PBO_ae3a605f"
+    },
+    {
+      "type": "java",
+      "name": "MainAPP",
+      "request": "launch",
+      "mainClass": "MainAPP",
+      "projectName": "Tubes_PBO_ae3a605f"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Tubes_PBO_ae3a605f"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Tubes_PBO_4b9668f6",
+      "vmArgs": "--module-path lib/javafx-sdk-23.0.1/lib --add-modules javafx.controls,javafx.fxml"
+    }
+  ]
 }
