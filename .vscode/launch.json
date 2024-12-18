@@ -9,6 +9,13 @@
       "name": "Running",
       "request": "launch",
       "mainClass": "Running",
+      "projectName": "Tubes_PBO_451090ec"
+    },
+    {
+      "type": "java",
+      "name": "Running",
+      "request": "launch",
+      "mainClass": "Running",
       "projectName": "Tubes_PBO_ae3a605f"
     },
     {
