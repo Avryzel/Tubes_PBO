@@ -2,13 +2,14 @@
   "java.project.sourcePaths": ["src"],
   "java.project.outputPath": "bin",
   "java.project.referencedLibraries": [
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.media.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.base.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.web.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.swing.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.fxml.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx-swt.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.controls.jar",
-    "c:\\Semester 3\\PBO (A)\\Tubes_PBO\\lib\\javafx-sdk-23.0.1\\lib\\javafx.graphics.jar"
+    "lib//*.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.base.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.controls.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.fxml.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.graphics.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.media.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.swing.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx.web.jar",
+    "lib/javafx-sdk-23.0.1/lib/javafx-swt.jar"
   ]
 }
