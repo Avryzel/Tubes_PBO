@@ -33,7 +33,7 @@ public class ContactApp extends Application {
             }
         });
 
-        // Edit and delete buttons
+        // Edit and delete button
         Button editButton = new Button("Edit Contact");
         Button deleteButton = new Button("Delete Contact");
 
@@ -68,16 +68,6 @@ public class ContactApp extends Application {
                 alert.setContentText("Message: " + messageField.getText());
                 alert.showAndWait();
                 messageField.clear();
-            }
-        });
-
-        Button backButton = new Button("Back to Menu");
-        backButton.setOnAction(e -> {
-            MenuApp menuApp = new MenuApp();
-            try {
-                menuApp.start(primaryStage);
-            } catch (Exception ex) {
-                ex.printStackTrace();
             }
         });
 

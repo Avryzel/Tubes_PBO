@@ -15,7 +15,7 @@ public class IdApp extends Application {
         ListView<String> idListView = new ListView<>(idList);
         TextField idField = new TextField();
         idField.setPromptText("Enter ID");
-        TextField passwordField = new TextField(); // Password visible
+        TextField passwordField = new TextField(); 
         passwordField.setPromptText("Enter Password");
 
         // Button to add ID
