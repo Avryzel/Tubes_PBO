@@ -67,25 +67,33 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
 ## Update
 Untuk saat ini, menu yang baru terkoneksi dengan database yaitu Kontak Apk.
 
--database bikin manual sendiri
+- database bikin manual sendiri
 
--nama database database_kontak
+- nama database database_kontak
 
--nama table kontak
+- nama table kontak
 
--isi table nama varchar(50) not null
+- isi table nama varchar(50) not null
 
--no_hp varchar(50) not null
+- no_hp varchar(50) not null
 
--pesan text
+- pesan text
+
 
 CREATE DATABASE database_kontak;
-USE DATABASE database_kontak;
-CREATE TABLE kontak (
-nama varchar(50) not null,
-no_hp varchar(50) not null,
-pesan text
+
+   USE DATABASE database_kontak;
+   
+   CREATE TABLE kontak (
+   
+      nama varchar(50) not null,
+      
+      no_hp varchar(50) not null,
+      
+      pesan text
+      
 );
+
 
 menampilkan data yang ada di database ✅
 
