@@ -1,18 +1,84 @@
-## Getting Started
+## Aplikasi Kontak
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informasi seperti nomor telfon, username dan password untuk sebuah aplikasi, dan catatan.
 
-## Folder Structure
+## Apa yang berfungsi
 
-The workspace contains two folders by default, where:
+1. Login Untuk Memasuki Aplikasi
+  ![image](https://github.com/user-attachments/assets/229e9de9-95b3-4398-ab55-b04d162258a0)
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+  `username`: admin
+  `password`: 1234
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+2. Menu Utama Aplikasi
+  ![image](https://github.com/user-attachments/assets/107b12bf-56ce-4074-ac70-743d04a09184)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+  `Kontak Apk`: untuk menyimpan kontak.
+  `Id Apk`: untuk menyimpan username dan password untuk sebuah aplikasi.
+  `catatan Aok`: untuk menyimpan catatan.
 
-## Dependency Management
+3. Fitur Kontak Apk
+  ![image](https://github.com/user-attachments/assets/e2cc8ee1-6977-473b-a6b5-b4153cd7b15f)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+  `Tampilan`: menampilkan nama dan kontak yang tersimpan dalam database.
+  `Tambah Kontak`: menambahkan kontak ke dalam database.
+  `Edit Kontak`: mengedit atau memperbarui kontak yang ada di dalam database.
+  `Hapus Kontak`: menghapus kontak yang ada di dalam database.
+  `Kembali`: Kembali ke menu utama.
+
+4. Fitur ID Apk
+   ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
+   
+  `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
+  `Tambah Id`: menambahkan Id ke dalam database.
+  `Edit Id`: mengedit atau memperbarui Id yang ada di dalam database.
+  `Hapus Id`: menghapus Id yang ada di dalam database.
+  `Kembali`: Kembali ke menu utama.
+
+5. Fitur ID Apk
+   ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
+  `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
+  `Tambah Id`: menambahkan Id ke dalam database.
+  `Edit Id`: mengedit atau memperbarui Id yang ada di dalam database.
+  `Hapus Id`: menghapus Id yang ada di dalam database.
+  `Kembali`: Kembali ke menu utama.
+
+6. Fitur ID Apk
+   ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
+   
+  `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
+  `Tambah Id`: menambahkan Id ke dalam database.
+  `Edit Id`: mengedit atau memperbarui Id yang ada di dalam database.
+  `Hapus Id`: menghapus Id yang ada di dalam database.
+  `Kembali`: Kembali ke menu utama.
+
+7. Fitur Catatan Apk
+   ![image](https://github.com/user-attachments/assets/537edcf1-7891-4659-a878-2c8c397f5dba)
+
+  `Tampilan`: menampilkan catatan tersimpan dalam database.
+  `Tambah Catatan`: menambahkan catatan ke dalam database.
+  `Edit Catatan`: mengedit atau memperbarui catatan yang ada di dalam database.
+  `Hapus Catatan`: menghapus catatan yang ada di dalam database.
+  `Kembali`: Kembali ke menu utama.
+
+## Update
+Untuk saat ini, menu yang baru terkoneksi dengan database yaitu Kontak Apk.
+-database bikin manual sendiri
+-nama database database_kontak
+-nama table kontak
+-isi table nama varchar(50) not null
+-no_hp varchar(50) not null
+-pesan text
+
+CREATE DATABASE database_kontak;
+USE DATABASE database_kontak;
+CREATE TABLE kontak (
+nama varchar(50) not null,
+no_hp varchar(50) not null,
+pesan text
+);
+
+menampilkan data yang ada di database ✅
+tambah kontak ✅
+edit kontak ✅
+hapus kontak ✅
