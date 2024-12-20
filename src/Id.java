@@ -36,6 +36,6 @@ public class Id {
 
     @Override
     public String toString(){
-        return "(Nama Aplikasi: " + NamaAPK + ") \n(Id: " + Id + ") \n(Password: " + Password + ")";
+        return "(Nama Aplikasi : " + NamaAPK + ") \n(Id : " + Id + ") \n(Password : " + Password + ")";
     }
 }

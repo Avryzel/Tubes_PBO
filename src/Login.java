@@ -11,7 +11,7 @@ public class Login extends Application {
     @Override
     public void start(Stage TampilanLogin) {
         // Menambahkan gambar logo
-        Image logo = new Image("./lampu.png"); // Ganti dengan path gambar yang sesuai
+        Image logo = new Image("./lampu.png");
         ImageView logoView = new ImageView(logo);
         logoView.setFitWidth(100);
         logoView.setPreserveRatio(true);
@@ -44,7 +44,7 @@ public class Login extends Application {
 
         VBox layout = new VBox(10, logoView, UserJudul, User, PassJudul, Password, loginButton);
         layout.setPadding(new Insets(20));
-        layout.setStyle("-fx-background-color: #f0f0f0;"); // Mengatur warna latar belakang
+        layout.setStyle("-fx-background-color: #f0f0f0;");
         Scene scene = new Scene(layout, 600, 400);
 
         TampilanLogin.setTitle("Login");

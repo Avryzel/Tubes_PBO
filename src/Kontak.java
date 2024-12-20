@@ -36,6 +36,6 @@ public class Kontak {
 
     @Override
     public String toString() {
-        return "(Nama: " + Nama + ") \n(No Hp" + NoHP +")";
+        return "(Nama  : " + Nama + ") \n(No Hp : " + NoHP +")";
     }
 }
