@@ -1,10 +1,10 @@
 // Class Contact
-public class Contact {
+public class Kontak {
     private String Nama;
     private String NoHP;
     private String Pesan;
 
-    public Contact(String Nama, String NoHP) {
+    public Kontak(String Nama, String NoHP) {
         this.Nama = Nama;
         this.NoHP = NoHP;
         this.Pesan = "";
@@ -36,6 +36,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return Nama + " (" + NoHP + ")";
+        return "(Nama  : " + Nama + ") \n(No Hp : " + NoHP +")";
     }
 }

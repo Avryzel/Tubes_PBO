@@ -9,27 +9,27 @@ import javafx.scene.image.ImageView;
 
 public class Login extends Application {
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage TampilanLogin) {
         // Menambahkan gambar logo
-        Image logo = new Image("C:\\KULIAH SEMESTER 3\\PBO\\Prak PBO\\Tubes_PBO\\lampu.PNG"); // Ganti dengan path gambar yang sesuai
+        Image logo = new Image("./lampu.png");
         ImageView logoView = new ImageView(logo);
         logoView.setFitWidth(100);
         logoView.setPreserveRatio(true);
 
-        Label userLabel = new Label("Username:");
-        TextField userField = new TextField();
-        Label passLabel = new Label("Password:");
-        PasswordField passField = new PasswordField();
+        Label UserJudul = new Label("Username:");
+        TextField User = new TextField();
+        Label PassJudul = new Label("Password:");
+        PasswordField Password = new PasswordField();
         Button loginButton = new Button("Login");
 
         loginButton.setOnAction(e -> {
-            String username = userField.getText();
-            String password = passField.getText();
+            String username = User.getText();
+            String password = Password.getText();
 
             if (username.equals("admin") && password.equals("1234")) {
-                MenuApp menuApp = new MenuApp();
+                Menu menuApp = new Menu();
                 try {
-                    menuApp.start(primaryStage);
+                    menuApp.start(TampilanLogin);
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
@@ -42,13 +42,13 @@ public class Login extends Application {
             }
         });
 
-        VBox layout = new VBox(10, logoView, userLabel, userField, passLabel, passField, loginButton);
+        VBox layout = new VBox(10, logoView, UserJudul, User, PassJudul, Password, loginButton);
         layout.setPadding(new Insets(20));
-        layout.setStyle("-fx-background-color: #f0f0f0;"); // Mengatur warna latar belakang
+        layout.setStyle("-fx-background-color: #f0f0f0;");
         Scene scene = new Scene(layout, 600, 400);
 
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        TampilanLogin.setTitle("Login");
+        TampilanLogin.setScene(scene);
+        TampilanLogin.show();
     }
 }
