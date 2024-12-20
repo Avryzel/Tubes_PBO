@@ -50,7 +50,7 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   
   `Kembali`: Kembali ke menu utama.
 
-<h2>7. Fitur Catatan Apk</h2>
+<h2>5. Fitur Catatan Apk</h2>
    
    ![image](https://github.com/user-attachments/assets/537edcf1-7891-4659-a878-2c8c397f5dba)
 
