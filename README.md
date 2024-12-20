@@ -5,12 +5,14 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
 ## Apa yang berfungsi
 
 1. Login Untuk Memasuki Aplikasi
+   
   ![image](https://github.com/user-attachments/assets/229e9de9-95b3-4398-ab55-b04d162258a0)
 
   `username`: admin
   `password`: 1234
 
 2. Menu Utama Aplikasi
+   
   ![image](https://github.com/user-attachments/assets/107b12bf-56ce-4074-ac70-743d04a09184)
 
   `Kontak Apk`: untuk menyimpan kontak.
@@ -18,6 +20,7 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   `catatan Aok`: untuk menyimpan catatan.
 
 3. Fitur Kontak Apk
+   
   ![image](https://github.com/user-attachments/assets/e2cc8ee1-6977-473b-a6b5-b4153cd7b15f)
 
   `Tampilan`: menampilkan nama dan kontak yang tersimpan dalam database.
@@ -27,6 +30,7 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   `Kembali`: Kembali ke menu utama.
 
 4. Fitur ID Apk
+   
    ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
    
   `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
@@ -36,6 +40,7 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   `Kembali`: Kembali ke menu utama.
 
 5. Fitur ID Apk
+   
    ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
   `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
   `Tambah Id`: menambahkan Id ke dalam database.
@@ -43,7 +48,8 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   `Hapus Id`: menghapus Id yang ada di dalam database.
   `Kembali`: Kembali ke menu utama.
 
-6. Fitur ID Apk
+7. Fitur ID Apk
+   
    ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
    
   `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
@@ -53,6 +59,7 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   `Kembali`: Kembali ke menu utama.
 
 7. Fitur Catatan Apk
+   
    ![image](https://github.com/user-attachments/assets/537edcf1-7891-4659-a878-2c8c397f5dba)
 
   `Tampilan`: menampilkan catatan tersimpan dalam database.
