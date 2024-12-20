@@ -24,7 +24,7 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
 
 <h2>3. Fitur Kontak Apk</h2>
    
-  ![image](https://github.com/user-attachments/assets/e2cc8ee1-6977-473b-a6b5-b4153cd7b15f)
+  ![image](https://github.com/user-attachments/assets/1880690a-673f-4873-8d2c-68b555e9a99b)
 
   `Tampilan`: menampilkan nama dan kontak yang tersimpan dalam database.
   
@@ -37,33 +37,6 @@ Aplikasi Kontak adalah aplikasi berbasis javafx yang menyimpan beberapa informas
   `Kembali`: Kembali ke menu utama.
 
 <h2>4. Fitur ID Apk</h2>
-   
-   ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
-   
-  `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
-  
-  `Tambah Id`: menambahkan Id ke dalam database.
-  
-  `Edit Id`: mengedit atau memperbarui Id yang ada di dalam database.
-  
-  `Hapus Id`: menghapus Id yang ada di dalam database.
-  
-  `Kembali`: Kembali ke menu utama.
-
-<h2>5. Fitur ID Apk</h2>
-   
-   ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
-  `Tampilan`: menampilkan nama aplikasi, id, dan password untuk sebuah aplikasi yang tersimpan dalam database.
-  
-  `Tambah Id`: menambahkan Id ke dalam database.
-  
-  `Edit Id`: mengedit atau memperbarui Id yang ada di dalam database.
-  
-  `Hapus Id`: menghapus Id yang ada di dalam database.
-  
-  `Kembali`: Kembali ke menu utama.
-
-<h2>6. Fitur ID Apk</h2>
    
    ![image](https://github.com/user-attachments/assets/5a7a0ab0-4478-46ec-8f20-2ae95ade1c33)
    
