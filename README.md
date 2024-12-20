@@ -80,19 +80,13 @@ Untuk saat ini, menu yang baru terkoneksi dengan database yaitu Kontak Apk.
 - pesan text
 
 
-CREATE DATABASE database_kontak;
-
-   USE DATABASE database_kontak;
-   
-   CREATE TABLE kontak (
-   
-      nama varchar(50) not null,
-      
-      no_hp varchar(50) not null,
-      
-      pesan text
-      
-);
+      CREATE DATABASE database_kontak;
+      USE DATABASE database_kontak;
+      CREATE TABLE kontak (
+         nama varchar(50) not null,
+         no_hp varchar(50) not null,
+         pesan text
+        );
 
 
 menampilkan data yang ada di database ✅
