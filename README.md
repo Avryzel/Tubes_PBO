@@ -69,31 +69,33 @@ Untuk saat ini, menu yang baru terkoneksi dengan database yaitu Kontak Apk.
 
 - database bikin manual sendiri
 
-- nama database database_kontak
+- nama database kontak_apk
 
-- nama table kontak
-
-- isi table nama varchar(50) not null
-
-- no_hp varchar(50) not null
-
-- pesan text
-
-
-      CREATE DATABASE database_kontak;
-      USE DATABASE database_kontak;
+      CREATE DATABASE kontak_apk;
+      USE DATABASE kontak_apk;
       CREATE TABLE kontak (
          nama varchar(50) not null,
          no_hp varchar(50) not null,
          pesan text
         );
 
+      CREATE TABLE id (
+         nama_aplikasi varchar(50) not null,
+         id varchar(50) not null,
+         password varchar(50) not null
+        );
 
-menampilkan data yang ada di database ✅
+      CREATE TABLE catatan (
+         catatan text not null
+        );
 
-tambah kontak ✅
+      COMMIT;
 
-edit kontak ✅
 
-hapus kontak ✅
+Menampilkan data yang ada di database✅
 
+Tambah Kontak, ID, Catatan✅
+
+Edit Kontak, ID, dan Catatan✅
+
+Hapus Kontak, ID, dan Catatan✅
