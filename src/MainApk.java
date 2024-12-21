@@ -6,90 +6,101 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
+import java.sql.*;
+
 public class MainApk extends Application {
     private Stage TampilanUtama;
-    private Scene TampilanLogin, TampilanMenu;
+    private Scene TampilanLogin, TampilanMenu, TampilanRegister;
 
     @Override
     public void start(Stage TampilanUtama) {
         this.TampilanUtama = TampilanUtama;
         TampilanUtama.setTitle("Aplikasi Kontak");
 
-        // Membuat tampilan login
-        MembuatTampilanLogin();
+        // Create login and register scenes
+        MembuatTampilanMenu();
+        MembuatTampilanRegister();
 
-        // Menampilkan tampilan login
+        // Show login scene
         TampilanUtama.setScene(TampilanLogin);
         TampilanUtama.show();
     }
 
-    private void MembuatTampilanLogin() {
-        Label JudulLabel = MembuatLabel("Aplikasi Kontak");
-        // Label dan field input
-        Label userLabel = MembuatLabel("Username:");
-        TextField User = MembuatTextField();
-        
-        Label passLabel = MembuatLabel("Password:");
-        PasswordField Password = MembuatPasswordField();
-        
-        // Tombol login
-        Button TombolLogin = MembuatTombolLogin(User, Password);
+    private void MembuatTampilanMenu() {
+        Label JudulLabel = new Label("Login");
+        JudulLabel.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
 
-        // Layout untuk login
-        JudulLabel.setStyle("-fx-font-size: 25;" +
-                            "-fx-font-weight: bold;");
-        userLabel.setStyle("-fx-font-size: 20;" +
-                           "-fx-font-weight: bold");
-        passLabel.setStyle("-fx-font-size: 20;" +
-                           "-fx-font-weight: bold");
-        VBox loginLayout = new VBox(15, JudulLabel, userLabel, User, passLabel, Password, TombolLogin);
-        loginLayout.setPadding(new Insets(30));
-        loginLayout.setStyle("-fx-background-color: linear-gradient(to bottom, #f0f0f0, #e0e0e0);" + "-fx-background-radius: 10;");
-        loginLayout.setAlignment(Pos.CENTER);
+        TextField uerLabel = new TextField();
+        uerLabel.setPromptText("Username");
+        uerLabel.setStyle("-fx-background-radius: 5; -fx-padding: 8px;");
 
-        TampilanLogin = new Scene(loginLayout, 600, 400); // Ukuran disesuaikan
-    }
+        PasswordField passLabel = new PasswordField();
+        passLabel.setPromptText("Password");
+        passLabel.setStyle("-fx-background-radius: 5; -fx-padding: 8px;");
 
-    private Label MembuatLabel(String text) {
-        Label label = new Label(text);
-        label.setStyle("-fx-font-weight: bold;");
-        return label;
-    }
-
-    private TextField MembuatTextField() {
-        TextField textField = new TextField();
-        textField.setStyle("-fx-background-radius: 5; -fx-padding: 8px;");
-        return textField;
-    }
-
-    private PasswordField MembuatPasswordField() {
-        PasswordField passwordField = new PasswordField();
-        passwordField.setStyle("-fx-background-radius: 5; -fx-padding: 8px;");
-        return passwordField;
-    }
-
-    private Button MembuatTombolLogin(TextField User, PasswordField Password) {
         Button TombolLogin = new Button("Login");
-        TombolLogin.setStyle("-fx-background-color: #4CAF50;" + 
-                             "-fx-text-fill: white;" + 
-                             "-fx-background-radius: 5;" + 
-                             "-fx-padding: 10px 12px;" +
-                             "-fx-font-weight: bold;" +
-                             "-fx-font-size: 15");
+        TombolLogin.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10px 12px; -fx-font-weight: bold; -fx-font-size: 15;");
         TombolLogin.setOnAction(e -> {
-            String username = User.getText();
-            String password = Password.getText();
-            if (username.equals("admin") && password.equals("1234")) {
-                MembuatTampilanMenu();
+            String username = uerLabel.getText();
+            String password = passLabel.getText();
+            if (authenticateUser(username, password)) {
+                createTampilanMenu();
                 TampilanUtama.setScene(TampilanMenu);
             } else {
-                showAlert("Login Failed", "Invalid username or password!");
+                showAlert("Login Failed", "Invalid username or password.");
             }
         });
-        return TombolLogin;
+
+        Button TombolRegister = new Button("Register");
+        TombolRegister.setStyle("-fx-background-color: #2196F3; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10px 12px; -fx-font-weight: bold; -fx-font-size: 15;");
+        TombolRegister.setOnAction(e -> TampilanUtama.setScene(TampilanRegister));
+
+        VBox menuLayout = new VBox(10, JudulLabel, uerLabel, passLabel, TombolLogin, TombolRegister);
+        menuLayout.setPadding(new Insets(20));
+        menuLayout.setAlignment(Pos.CENTER);
+        menuLayout.setStyle("-fx-background-color: linear-gradient(to bottom, #f0f0f0, #e0e0e0); -fx-background-radius: 10;");
+
+        TampilanLogin = new Scene(menuLayout, 600, 400);
     }
 
-    private void MembuatTampilanMenu() {
+    private void MembuatTampilanRegister() {
+        Label JudulLabel = new Label("Register");
+        JudulLabel.setStyle("-fx-font-size: 24px; -fx-font-weight: bold;");
+
+        TextField uerLabel = new TextField();
+        uerLabel.setPromptText("Username");
+        uerLabel.setStyle("-fx-background-radius: 5; -fx-padding: 8px;");
+
+        PasswordField passLabel = new PasswordField();
+        passLabel.setPromptText("Password");
+        passLabel.setStyle("-fx-background-radius: 5; -fx-padding: 8px;");
+
+        Button TombolRegister = new Button("Register");
+        TombolRegister.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10px 12px; -fx-font-weight: bold; -fx-font-size: 15;");
+        TombolRegister.setOnAction(e -> {
+            String username = uerLabel.getText();
+            String password = passLabel.getText();
+            if (registerUser(username, password)) {
+                showAlert("Success", "Registration successful. Please login.");
+                TampilanUtama.setScene(TampilanLogin);
+            } else {
+                showAlert("Registration Failed", "Username already exists.");
+            }
+        });
+
+        Button backButton = new Button("Back to Login");
+        backButton.setStyle("-fx-background-color: #F44336; -fx-text-fill: white; -fx-background-radius: 5; -fx-padding: 10px 12px; -fx-font-weight: bold; -fx-font-size: 15;");
+        backButton.setOnAction(e -> TampilanUtama.setScene(TampilanLogin));
+
+        VBox menuLayout = new VBox(10, JudulLabel, uerLabel, passLabel, TombolRegister, backButton);
+        menuLayout.setPadding(new Insets(20));
+        menuLayout.setAlignment(Pos.CENTER);
+        menuLayout.setStyle("-fx-background-color: linear-gradient(to bottom, #f0f0f0, #e0e0e0); -fx-background-radius: 10;");
+
+        TampilanRegister = new Scene(menuLayout, 600, 400);
+    }
+
+    private void createTampilanMenu() {
         // Tombol untuk menu dengan styling yang lebih menarik
         Button contactButton = MembuatStyledButton("Kontak Apk", "#2196F3");
         Button idButton = MembuatStyledButton("Id Apk", "#4CAF50");
@@ -101,14 +112,14 @@ public class MainApk extends Application {
         noteButton.setOnAction(e -> openNoteApp());
         exitButton.setOnAction(e -> TampilanUtama.close());
 
-        // Layout untuk menu
-        VBox menuLayout = new VBox(15, contactButton, idButton, noteButton, exitButton);
-        menuLayout.setPadding(new Insets(30));
-        menuLayout.setStyle("-fx-background-color: linear-gradient(to bottom, #f0f0f0, #e0e0e0);" + 
+        // menuLayout untuk menu
+        VBox menumenuLayout = new VBox(15, contactButton, idButton, noteButton, exitButton);
+        menumenuLayout.setPadding(new Insets(30));
+        menumenuLayout.setStyle("-fx-background-color: linear-gradient(to bottom, #f0f0f0, #e0e0e0);" + 
                              "-fx-background-radius: 10;");
-        menuLayout.setAlignment(Pos.CENTER);
-
-        TampilanMenu = new Scene(menuLayout, 600, 400);
+        menumenuLayout.setAlignment(Pos.CENTER);
+        
+        TampilanMenu = new Scene(menumenuLayout, 600, 400);
     }
 
     // Metode helper untuk membuat tombol dengan styling
@@ -148,6 +159,40 @@ public class MainApk extends Application {
             noteApp.start(TampilanUtama);
         } catch (Exception ex) {
             showAlert("Error", "Tidak bisa membuka Catatan Apk");
+        }
+    }
+
+    private boolean authenticateUser(String username, String password) {
+        try (Connection connection = database.connect()) {
+            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+            PreparedStatement pstmt = connection.prepareStatement(query);
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+
+            ResultSet rs = pstmt.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            showAlert("Database Error", "Error during login: " + e.getMessage());
+            return false;
+        }
+    }
+
+    private boolean registerUser(String username, String password) {
+        try (Connection connection = database.connect()) {
+            String insertSQL = "INSERT INTO users (username, password) VALUES (?, ?)";
+            PreparedStatement pstmt = connection.prepareStatement(insertSQL);
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
+
+            pstmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            if (e.getMessage().contains("UNIQUE constraint failed")) {
+                return false;
+            } else {
+                showAlert("Database Error", "Error during registration: " + e.getMessage());
+                return false;
+            }
         }
     }
 

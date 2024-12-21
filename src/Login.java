@@ -26,7 +26,7 @@ public class Login extends Application {
             String username = User.getText();
             String password = Password.getText();
 
-            if (username.equals("admin") && password.equals("1234")) {
+            if (username.equals("") && password.equals("")) {
                 Menu menuApp = new Menu();
                 try {
                     menuApp.start(TampilanLogin);
